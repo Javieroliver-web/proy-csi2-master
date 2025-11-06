@@ -316,9 +316,7 @@
             ],
             "styles": [
               "projects/fotos-app/src/styles.css"
-            ],
-            "server": "projects/fotos-app/src/main.server.ts",
-            "outputMode": "server"
+            ]
           },
           "configurations": {
             "production": {

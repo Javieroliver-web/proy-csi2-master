@@ -1,0 +1,20 @@
+a {
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: .25em;
+}
+a:hover {
+  background-color: lightgray;
+}
+a:active {
+  background-color: gray;
+  color: white;
+}
+div{
+  border-bottom: 1px solid black;
+  box-shadow: 0 4px 2px -2px gray;
+  padding: 10px
+}

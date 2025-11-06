@@ -1,0 +1,15 @@
+<p>cliente-detalle me has dado el clienteId: {{clienteId}}</p>
+<p>Hola, {{cliente?.nombre || 'no se encontró'}} </p>
+<button (click)="goBack()">Volver</button>
+@if (cliente) {
+  <h2>Formulario {{ tipo }}</h2>
+  <form>
+    <label for="id">Id cliente</label>
+    <input type="text" id="id" [(ngModel)]="cliente.id" [ngModelOptions]="{standalone: true}" name="id" readonly />
+    <label for="nombre">Nombre de cliente</label>
+    <input type="text" id="nombre" [(ngModel)]="cliente.nombre" [ngModelOptions]="{standalone: true}" name="nombre" />
+    <label for="email">Email de cliente</label>
+    <input type="email" id="email" [(ngModel)]="cliente.email" [ngModelOptions]="{standalone: true}" name="email" />
+  </form>
+
+}

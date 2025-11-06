@@ -1,0 +1,7 @@
+<h2>Lista de artículos</h2>
+<ul>
+  @for (articulo of listaArticulos; track $index) {
+    <li routerLink="/articulo-detalle/{{articulo.id}}">{{articulo.id}} - {{articulo.nombre}} </li>
+  }
+</ul>
+

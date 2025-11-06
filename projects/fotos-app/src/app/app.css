@@ -1,0 +1,85 @@
+/* En styles.css (global) o app.component.css */
+header, footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  header nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+  }
+  main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* En vistas/fotos/fotos.component.css */
+  .photo-grid {
+    display: grid;
+    gap: 1rem;
+    /* 1 columna en móvil (por defecto) [cite: 52] */
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .photo-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .photo-card img {
+    max-width: 150px; /* Tamaño del thumbnail [cite: 40] */
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  /* Media query para tablets (2 columnas) [cite: 52] */
+  @media (min-width: 600px) {
+    .photo-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Media query para escritorio (4 columnas) [cite: 52] */
+  @media (min-width: 900px) {
+    .photo-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  /* En vistas/detalle/detalle.component.css [cite: 53] */
+  .detalle-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .detalle-imagen {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 600px; /* Límite en escritorio */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-group input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Importante para que el padding no rompa el 100% */
+  }

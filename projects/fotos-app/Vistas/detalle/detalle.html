@@ -1,0 +1,27 @@
+<div *ngIf="foto$ | async as foto" class="detalle-container">
+
+    <h2>Detalle: {{ foto.title }}</h2>
+    
+    <img [src]="foto.url" [alt]="foto.title" class="detalle-imagen"> <p><strong>Álbum ID:</strong> {{ foto.albumId }}</p>
+    <p><strong>Foto ID:</strong> {{ foto.id }}</p>
+  
+    <hr>
+  
+    <h3>Editar datos</h3>
+    <form [formGroup]="fotoForm" (ngSubmit)="guardarCambios()">
+      
+      <div class="form-group">
+        <label for="title">Título:</label>
+        <input id="title" type="text" formControlName="title">
+      </div>
+  
+      <div class="form-group">
+        <label for="url">URL Imagen:</label>
+        <input id="url" type="text" formControlName="url">
+      </div>
+      
+      <button type="submit" [disabled]="fotoForm.invalid">Guardar cambios</button>
+    
+    </form>
+  
+  </div>

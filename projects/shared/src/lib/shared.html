@@ -1,0 +1,8 @@
+<h1>{{ title() }}</h1>
+<ul>
+    @for (articulo of articulos; track $index) {
+      <li>
+        <a routerLink="" style="cursor: pointer;">{{ articulo.nombre }}</a>
+      </li>
+      }
+    </ul>

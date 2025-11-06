@@ -1,0 +1,19 @@
+<h2>Detalle de artículo</h2>
+<form>
+  @if (articulo.id) {
+    <label for="Id">
+      Id:
+      <input type="text" id="Id" name="Id" [(ngModel)]="articulo.id" />
+    </label>
+    <label for="nombre">
+      Nombre:
+      <input type="text" id="nombre" name="nombre" [(ngModel)]="articulo.nombre" />
+    </label>
+    <label for="precio">
+      Precio:
+      <input type="number" id="precio" name="precio" [(ngModel)]="articulo.precio" />
+    </label>
+  }
+
+
+</form>

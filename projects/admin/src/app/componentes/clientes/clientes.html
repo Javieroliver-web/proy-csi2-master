@@ -1,0 +1,25 @@
+<h2>Lista de clientes</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (cliente of listaClientes; track $index) {
+      <tr>
+        <td>{{cliente.id}}</td>
+        <td>{{cliente.nombre}}</td>
+        <td>
+          <a (click)="verCliente(cliente)">Ver</a>
+          <a routerLink="/cliente-detalle/{{cliente.id}}">Detalle</a>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
+@if (clienteSeleccionado) {
+  <app-detalle-cliente [clienteSeleccionado]="clienteSeleccionado"></app-detalle-cliente>
+}

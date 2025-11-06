@@ -7,7 +7,7 @@ import { Post } from '../modelos/post';
   providedIn: 'root'
 })
 export class PostService {
-  // MOdifico el servicio para que traiga la colección de datos que me interesa, por ejemplo posts o usuarios
+    
   private url = 'https://jsonplaceholder.typicode.com';
   tablaURL = '';
 

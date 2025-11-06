@@ -1,0 +1,33 @@
+.inicio-container {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .inicio-container h2 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  
+  .inicio-container p {
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .inicio-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 600px) {
+    .inicio-container h2 {
+      font-size: 1.5rem;
+    }
+  
+    .inicio-container p {
+      font-size: 1rem;
+    }
+  }

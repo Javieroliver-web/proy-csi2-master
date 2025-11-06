@@ -12,7 +12,6 @@ import { Cliente } from '../../../../../shared/src/lib/modelos/cliente';
 })
 export class Clientes {
 
-  // Inyectar servicio de clientes y recuperar la lista del cientes
   private clientesService = inject(ClientesService);
   listaClientes: Cliente[] = this.clientesService.getClientes();
   clienteSeleccionado: Cliente | null = null;

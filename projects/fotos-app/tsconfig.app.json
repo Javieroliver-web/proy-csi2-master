@@ -1,18 +1,17 @@
-// projects/fotos-app/tsconfig.app.json
 {
-  "extends": "../../tsconfig.json", // <-- Hereda de la raíz
+  "extends": "../../tsconfig.json", 
   "compilerOptions": {
     "outDir": "../../out-tsc/app",
     "types": []
   },
   "files": [
-    "src/main.ts" // <-- Archivo de entrada principal
+    "src/main.ts" 
   ],
   "include": [
     "src/**/*.d.ts",
-    "src/**/*.ts" // <-- CORRECCIÓN: Añade esta línea
+    "src/**/*.ts" 
   ],
   "exclude": [
-    "**/*.spec.ts" // Opcional: excluye archivos de test
+    "**/*.spec.ts" 
   ]
 }

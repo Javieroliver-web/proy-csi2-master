@@ -1,1 +1,19 @@
-<p>fotos works!</p>
+<div class="fotos-container">
+    <h2>Listado de Fotos</h2>
+    
+    <div *ngIf="fotos$ | async as fotos; else loading" class="photo-grid">
+      
+      <div *ngFor="let foto of fotos" class="photo-card">
+        
+        <img [src]="foto.thumbnailUrl" [alt]="foto.title">
+        
+        <h3>{{ foto.title }}</h3>
+        <a [routerLink]="['/detalle', foto.id]" class="btn-detalle">Ver detalle</a>
+      </div>
+      
+    </div>
+    
+    <ng-template #loading>
+      <p>Cargando fotos...</p>
+    </ng-template>
+  </div>

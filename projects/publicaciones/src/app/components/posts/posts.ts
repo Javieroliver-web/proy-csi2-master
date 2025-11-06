@@ -13,16 +13,11 @@ export class Posts {
   posts: Post[] = [];
   newPost: Post = { title: '', body: '' };
 
-  // version con singals:
-  // posts = signal<Post[]>([]);
-  // newPost = signal<Post>({ title: '', body: '' });
-
   private postService = inject(PostService);
 
   ngOnInit(): void {
     this.postService.getItems<Post>('posts').subscribe((data: Post[]) => {
-      this.posts = data.slice(0, 10); // cargar solo los primeros 10 posts
-      // this.posts.set(data.slice(0, 10)); // version con signals
+      this.posts = data.slice(0, 10); 
       console.log('Posts cargados:', this.posts);
     });
     console.log('Posts cargados antes del observable: ', this.posts.length);

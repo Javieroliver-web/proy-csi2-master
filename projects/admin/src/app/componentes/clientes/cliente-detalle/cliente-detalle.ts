@@ -22,8 +22,6 @@ export class ClienteDetalle implements OnInit {
   tipo: string = 'de detalle';
 
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
     this.clienteId = this.activeRouter.snapshot.paramMap.get('id');
     this.cliente = this.clientesService.getClienteById(Number(this.clienteId));
   }

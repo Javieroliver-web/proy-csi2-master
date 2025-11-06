@@ -19,8 +19,6 @@ export class DetalleArticulo {
   articulo: any = {};
 
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
     this.articulo = this.articulosService.getOneArticle(this.articuloId ? parseInt(this.articuloId) : 0);
     console.log('articulo -> ', this.articulo);
   }

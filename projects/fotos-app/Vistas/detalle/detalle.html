@@ -22,6 +22,10 @@
       <input id="url" type="text" formControlName="url">
     </div>
     
+    <div *ngIf="guardadoExitoso" class="alert alert-success mt-3" role="alert">
+      ¡Cambios (simulados) guardados en consola!
+    </div>
+
     <button type="submit" [disabled]="fotoForm.invalid">Guardar cambios</button>
   
   </form>

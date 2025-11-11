@@ -17,6 +17,7 @@ export class DetalleComponent implements OnInit {
 
   public foto$!: Observable<Foto>;
   public fotoForm: FormGroup;
+  public guardadoExitoso: boolean = false; // <-- 1. AÑADIR ESTA VARIABLE
 
   constructor(
     private route: ActivatedRoute,
@@ -52,7 +53,18 @@ export class DetalleComponent implements OnInit {
   guardarCambios(): void {
     if (this.fotoForm.valid) {
       console.log('Formulario guardado:', this.fotoForm.value);
-      alert('Cambios (simulados) guardados en consola.');
+      
+      // 2. REEMPLAZAR EL ALERT NATIVO
+      // alert('Cambios (simulados) guardados en consola.');
+      
+      // CON ESTA LÓGICA
+      this.guardadoExitoso = true; 
+
+      // Opcional: Ocultar el mensaje después de 3 segundos
+      setTimeout(() => {
+        this.guardadoExitoso = false;
+      }, 3000);
+
     } else {
       console.error('El formulario no es válido.');
     }

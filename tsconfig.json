@@ -2,6 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./", 
+    "ignoreDeprecations": "6.0",
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -38,9 +39,6 @@
     },
     {
       "path": "./projects/admin/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/admin/tsconfig.spec.json"
     },
     {
       "path": "./projects/shared/tsconfig.lib.json"
